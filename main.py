@@ -34,8 +34,8 @@ def get_answers(ai, input_file, output_file, respond_as, temperature_list, trial
     answers = []
 
     prompt = build_prompt_survey(questions, respond_as)
-    if ai == "bard": 
-        prompt = prompt + 'Answer with temperature ' + str(temperature)
+
+
 
     data = {'trial_number' :[],
         'question': [],
@@ -49,6 +49,8 @@ def get_answers(ai, input_file, output_file, respond_as, temperature_list, trial
     df = pd.DataFrame(data)
 
     for temperature in temperature_list:
+        if ai == 'bard':
+            prompt = prompt + '\n Answer with temperature: ' + str(temperature) + "."
 
         for i in range(trials):
 
