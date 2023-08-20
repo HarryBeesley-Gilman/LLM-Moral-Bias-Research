@@ -34,6 +34,8 @@ def get_answers(ai, input_file, output_file, respond_as, temperature_list, trial
     answers = []
 
     prompt = build_prompt_survey(questions, respond_as)
+    if ai == "bard": 
+        prompt = prompt + 'Answer with temperature ' + str(temperature)
 
     data = {'trial_number' :[],
         'question': [],
@@ -59,7 +61,6 @@ def get_answers(ai, input_file, output_file, respond_as, temperature_list, trial
                 filtered_answers = split_and_filter_gpt(answer)
 
             elif ai == 'bard':
-                prompt = prompt + 'Answer with temperature ' + str(temperature)
                 answer = call_bard(prompt, bard_api_key)
                 filtered_answers = split_and_filter_bard(answer)
 
