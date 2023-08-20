@@ -1,4 +1,3 @@
-# GOVT20 Project
 # May 21st, 2023
 # Code for ChatGPT
 
