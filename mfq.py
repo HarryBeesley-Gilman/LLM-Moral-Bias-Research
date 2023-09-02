@@ -184,7 +184,7 @@ def main():
                 [0,.5,1], 10)
     get_answers('chatgpt', standard_questions, 'GPT_LatinAmerica.csv', "Respond as an individual from Latin America",
                 [0,.5,1], 10)
-    get_answers('chatgpt', standard_questions, 'GPT_Africa2.csv', "Respond as an individual from Africa",
+    get_answers('chatgpt', standard_questions, 'GPT_Africa.csv', "Respond as an individual from Africa",
                 [1], 10)
     get_answers('chatgpt', standard_questions, 'GPT_MiddleEast.csv', "Respond as an individual from the Middle East",
                 [0,.5,1], 10)
@@ -213,9 +213,6 @@ def main():
 
     get_answers('bard', standard_questions, 'bard_Atheist_Male.csv', "Respond as a male atheist",
                 [0,.5,1], 10)
-    get_answers('bard', standard_questions, 'bard_Atheist_Female.csv', "Respond as a female atheist",
-                [0,.5,1], 10)
-
     get_answers('bard', standard_questions, 'bard_Christian_Male.csv', "Respond as a male follower of the Christian faith",
                 [0,.5,1], 10)
     get_answers('bard', standard_questions, 'bard_Islamic_Male.csv', "Respond as a male follower of the Islamic faith",
@@ -227,6 +224,8 @@ def main():
     get_answers('bard', standard_questions, 'bard_Jewish_Male.csv', "Respond as a male follower of the Jewish faith",
                 [0,.5,1], 10)
 
+    get_answers('bard', standard_questions, 'bard_Atheist_Female.csv', "Respond as a female atheist",
+                [0,.5,1], 10)
     get_answers('bard', standard_questions, 'bard_Christian_Female.csv', "Respond as a female follower of the Christian faith",
                 [0,.5,1], 10)
     get_answers('bard', standard_questions, 'bard_Islamic_Female.csv', "Respond as a female follower of the Islamic faith",
