@@ -10,7 +10,7 @@ import os
 from bardapi.core import Bard
 import pandas as pd 
 from random import *
-from survey_methods import *
+from api_calls import *
 from text_processing import *
 from prepare_prompts import *
 import numpy as np
