@@ -28,7 +28,7 @@ vignettes = 'vignettes_questions.csv'
 def get_answers_bard(input_file, output_file, respond_as,temperature_list, trials):
     for i in range(trials):
         questions, question_numbers = load_questions(input_file)
-        subsets = create_vignettes_subsets_bard(questions, 1800, 5, question_numbers) #Bard often refuses to answer the vignette survey, I go ahead and create many
+        subsets = create_vignettes_subsets(questions, 1800, 5, question_numbers) #Bard often refuses to answer the vignette survey, I go ahead and create many
         #more subsets of questions than are necessary since the process is quite quick.
         answers = []
 
