@@ -129,13 +129,7 @@ def vignettes_split_and_filter_bard(answer):
 def vignettes_split_and_filter_gpt(answer):
     lines = answer.splitlines() 
     filtered_lines = [
-        line for line in lines 
-        if line.strip() != '.' 
-        and len(line.strip()) > 0 
-        and "as an AI language" not in line.lower() 
-        and accepted_line(line)
-    ]
-    
+        line for line in lines if line.strip() != '.' and len(line.strip()) > 0 and "as an AI language" not in line.lower() and accepted_line(line)]
     return filtered_lines
 
 
