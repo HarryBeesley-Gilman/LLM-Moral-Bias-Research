@@ -27,7 +27,7 @@ vignettes = 'vignettes_questions.csv'
 def get_answers_gpt(input_file, output_file, respond_as,temperature_list, trials):
     for i in range(trials): #running one trial will result in 15 surveys answered at a given temp
         questions, question_numbers = load_questions(input_file)
-        subsets = create_vignette_subsets_gpt(questions, 15, 15) #ask random 15-question subsets 15 times.
+        subsets = create_vignette_subsets(questions, 15, 15) #ask random 15-question subsets 15 times.
         answers = []
 
 
